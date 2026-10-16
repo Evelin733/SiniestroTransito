@@ -3,8 +3,7 @@ library(dplyr)
 library(tsibble)
 
 # 1. Leer el archivo Excel usando ruta relativa (para que funcione con Git)
-archivo <- "Data/12. BDD_diciembre_2024_final_SM.xlsx"
-df <- read_excel(archivo, sheet = "BDD_2024", col_types = "text")
+df <- read_excel("Data/12. BDD_diciembre_2024_final_SM.xlsx", sheet = 2, col_types = "text")
 
 # 2. Convertir la columna FECHA con el formato correcto de barras (día/mes/año)
 df$FECHA <- as.Date(df$FECHA, format = "%d/%m/%Y")
@@ -22,4 +21,4 @@ ts_datos <- df_agrupado %>%
   as_tsibble(index = FECHA, key = PROVINCIA)
 
 # 4. Ver el resultado
-print(ts_datos)
+head(ts_datos)
