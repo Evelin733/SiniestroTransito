@@ -18,7 +18,7 @@ if(is.numeric(df$FECHA)) {
 
 # 4. Filtrar 
 df_limpio <- df %>% 
-  filter(!is.na(FECHA), !is.na(PROVINCIA), PROVINCIA != "", PROVINCIA != "NA")
+  dplyr::filter(!is.na(FECHA), !is.na(PROVINCIA), PROVINCIA != "", PROVINCIA != "NA")
 
 # 5. Ver cuántas filas quedaron tras la limpieza
 print(paste("Filas después de limpiar:", nrow(df_limpio)))

@@ -59,3 +59,32 @@ ts_datos %>%
     axis.ticks.x = element_blank() # Elimina las marcas del eje X
   )
 
+
+
+
+# Revisor: Yajaira Toaquiza
+# 1. ESTACIONARIEDAD
+# No se observa evidencia de estacionariedad debil 
+# especialmente en Pichincha.
+# Los promedios cambian sistematicamente segun el dia
+# de la semana, lo que sugiere que la media no es
+# constante en el tiempo
+#
+# 2. TENDENCIA
+# No se identifica una tendencia creciente o decreciente
+# sostenida y claramente definida durante 2024.
+# Las series presentan fluctuaciones frecuentes, sin
+# una direccion general suficientemente evidente.
+
+# 3. ESTACIONALIDAD
+# Se identifica una estacionalidad semanal marcada.
+# En Pichincha, los sabados presentan un promedio
+# de siniestros superior al de los dias laborables.
+# Este comportamiento evidencia un patron que se
+# repite aproximadamente cada siete dias.
+#
+# 4. CICLOS
+# No se identifican ciclos. Aunque la serie presenta 
+# fluctuaciones, estas no evidencian movimientos de
+# aumento y disminucion de duracion variable que
+# permitan reconocer ciclos.
